@@ -52,3 +52,9 @@ CodeCoverage/
 *.VisualState.xml
 TestResult.xml
 nunit-*.xml
+
+# Project
+[Ll]ibs/
+.vscode/
+.config/
+[Pp]lugin/
