@@ -14,8 +14,11 @@ public class GoldItems : BaseUnityPlugin
     public static ManualLogSource Log { get; private set; }
 
     public ConfigEntry<float> GoldShopChance;
+    public static ConfigEntry<int> GoldShopPriceMultiplier;
     public static ConfigEntry<int> CooldownSeconds;
     public static ConfigEntry<int> RechargePercentPerSecond;
+
+    public static ConfigEntry<bool> ShareGoldenUpgrade;
 
     public AssetBundle GoldShopBundle;
     public GameObject GoldShopInteriorPrefab;
@@ -33,6 +36,13 @@ public class GoldItems : BaseUnityPlugin
             new ConfigDescription("Chance (0–1) that a shop dead end is turned into the Golden Shop.", new AcceptableValueRange<float>(0f, 1f))
         );
 
+        GoldShopPriceMultiplier = Config.Bind(
+            "Gold Shop",
+            "GoldShopPriceMultiplier",
+            5,
+            new ConfigDescription("The price multiplier of items that appear in the Gold Shop.", new AcceptableValueRange<int>(1, 10))
+        );
+
         CooldownSeconds = Config.Bind(
             "Golden Items",
             "CooldownSeconds",
@@ -45,6 +55,13 @@ public class GoldItems : BaseUnityPlugin
             "RechargePercentPerSecond",
             5,
             new ConfigDescription("Percent of max charge restored per second while recharging (0–1).", new AcceptableValueRange<int>(0, 100))
+        );
+
+        ShareGoldenUpgrade = Config.Bind(
+          "Golden Items",
+          "ShareGoldenUpgrade",
+          false,
+          "Should Golden Upgrades apply to all players."
         );
 
         LoadGoldShopPrefab();
