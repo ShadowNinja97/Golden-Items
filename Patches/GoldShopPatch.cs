@@ -217,7 +217,7 @@ public static class GoldShopPatch
         }
 
         // Tint specific children
-        TintRendererByIndex(hinge, 0, plugin.GoldDoorMaterial); //Mesh
+        TintRendererByIndex(hinge, 0, plugin.GoldDoorMaterialGlow); //Mesh
         TintRendererByIndex(hinge, 4, plugin.GoldDoorMaterial); //Handle
         TintRendererByIndex(hinge, 5, plugin.GoldDoorMaterial); //Handle
 

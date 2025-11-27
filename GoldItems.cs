@@ -23,6 +23,7 @@ public class GoldItems : BaseUnityPlugin
     public AssetBundle GoldShopBundle;
     public GameObject GoldShopInteriorPrefab;
     public Material GoldDoorMaterial;
+    public Material GoldDoorMaterialGlow;
 
     private void Awake()
     {
@@ -96,6 +97,10 @@ public class GoldItems : BaseUnityPlugin
         const string matNameInBundle = "assets/goldenitems/gold.mat";
 
         GoldDoorMaterial = GoldShopBundle.LoadAsset<Material>(matNameInBundle);
+
+        const string mat2NameInBundle = "assets/goldenitems/gold1.mat";
+        GoldDoorMaterialGlow = GoldShopBundle.LoadAsset<Material>(mat2NameInBundle);
+
 
     }
 }
