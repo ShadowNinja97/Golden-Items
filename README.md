@@ -12,3 +12,11 @@ Gold health packs are permanent variants of health packs. You can use them in on
 
 ## Gold Upgrade
 The Gold Upgrade grants the user +1 to all vanilla upgrades. This has a configurable setting to apply to all users in a lobby.
+
+
+<br><br>
+
+### Notes and Issues
+- This is untested for multiplayer. It should work but no guarantees. I'll adjust this after testing.
+- The Zero Gravity Orb is disabled because of shader issues. I'll fix that when I can.
+- The mod is designed for late game, so the prices are incredibly high. You can adjust this in the config.
